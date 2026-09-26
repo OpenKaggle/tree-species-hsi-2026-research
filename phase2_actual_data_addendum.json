@@ -1,0 +1,58 @@
+{
+  "addendum_version": 1,
+  "frozen_before_metrics_on": "2026-09-24",
+  "parent_protocol": "phase2_protocol.json version 1",
+  "reason": "The released Stage 2 label map contains exactly 170 labels, ten per class. The Phase 1 LightGBM min_child_samples=40 cannot form meaningful leaves on a four-fold split, so a symmetric low-shot parameter correction is required before either arm can be evaluated.",
+  "observed_contract": {
+    "cube_shape": [4205, 6048, 98],
+    "labels": 170,
+    "labels_per_class": 10,
+    "classes": 17,
+    "validation_tile_size": 128,
+    "validation_tile_groups": 126,
+    "fold_sizes": [44, 43, 41, 42],
+    "every_fold_contains_every_class": true
+  },
+  "validation": {
+    "splitter": "StratifiedGroupKFold",
+    "folds": 4,
+    "shuffle": true,
+    "seed": 20260909,
+    "group": "floor(row / 128), floor(column / 128)",
+    "invariants": [
+      "a spatial tile never crosses folds",
+      "every training and validation fold contains all 17 classes",
+      "PCA is fit on the training portion of each fold only",
+      "no Phase 1 labels, test pseudo-labels, leaderboard feedback, or external data enter this first experiment"
+    ]
+  },
+  "shared_classifier": {
+    "type": "LightGBM multiclass",
+    "n_estimators": 160,
+    "learning_rate": 0.03,
+    "num_leaves": 7,
+    "max_depth": 3,
+    "min_child_samples": 2,
+    "max_bin": 63,
+    "colsample_bytree": 0.8,
+    "reg_alpha": 0.5,
+    "reg_lambda": 2.0,
+    "class_weight": "balanced",
+    "seed": 20260909,
+    "applies_identically_to_reference_and_candidate": true
+  },
+  "unchanged_decisions": {
+    "reference": "3x3 local-mean spectrum",
+    "candidate": "fold-fit 24-component spectral PCA plus 3x3 mean, standard deviation, and first spectral differences",
+    "offline_thresholds": "unchanged from parent protocol",
+    "submission_budget": "unchanged from parent protocol"
+  },
+  "explicitly_rejected_for_first_pass": [
+    "random-pixel cross-validation",
+    "reusing a Phase 1 model or encoder",
+    "mixing the 690829 Phase 1 validation labels into Stage 2 training",
+    "self-training or test-scene pseudo-labeling",
+    "deep neural training on 170 labels",
+    "loosening the advancement threshold after seeing scores"
+  ]
+}

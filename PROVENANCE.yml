@@ -1,0 +1,53 @@
+schema_version: 1
+repository:
+  name: tree-species-hsi-research
+  url: https://github.com/openkaggle/tree-species-hsi-research
+snapshot:
+  kind: public-working-tree-source-snapshot
+  status: archived_after_phase2_stop
+  status_note: >-
+    Phase 1 baseline plus selected Phase 2 working-tree source and evidence.
+    The documented Phase 2 line stopped after its single gated submission.
+  base_head: 811c152c5e4453b57d4aaf37c56aae281644fe2e
+  base_head_date: "2026-09-10"
+  tracked_dirty_patch_sha256: 4f584bc80adf3bccea719f5ff5174b21a525b8dfa9916551f436f35a5aea6dd9
+  rules_checked_at: "2026-09-09"
+  rules_check_note: >-
+    Historical timestamp from the retained official receipt; this release did
+    not perform a current rules revalidation.
+competition:
+  name: Hyperspectral Tree Species Identification Challenge 2026
+  slug: tree-species-hsi-2026
+  url: https://www.kaggle.com/competitions/tree-species-hsi-2026
+included:
+  - Phase 1 source, tests, compact reports, and public leaderboard snapshots
+  - Phase 2 protocol, readiness, experiment, prediction, and validation source
+  - lightweight manifests, reports, and terminal submission evidence
+excluded:
+  - raw and downloaded competition data
+  - raw_phase2 absolute-path symlinks
+  - data-derived models, checkpoints, and artifact payloads
+  - generated submission CSV and ZIP payloads
+  - partial downloads, virtual environments, bytecode, and caches
+licensing:
+  original_work: MIT
+  boundary: >-
+    MIT covers only original OpenKaggle code and documentation for which
+    contributors hold rights.
+  competition_data: >-
+    Not redistributed. Locally recorded competition-specific terms are more
+    restrictive than a general metadata license and require prior permission.
+reproduction:
+  guide: REPRODUCIBILITY.md
+  documented_entry_points:
+    - README.md
+    - src/pipeline.py
+    - src/phase2_readiness.py
+    - src/phase2_experiment.py
+    - src/phase2_predict.py
+    - scripts/phase2_event_gate.sh
+    - tests/
+claims:
+  current_final_ready: false
+  raw_payload_backed_up_by_github: false
+  source_overlay_preserved: true

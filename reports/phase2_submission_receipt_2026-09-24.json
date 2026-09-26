@@ -1,0 +1,37 @@
+{
+  "competition": "tree-species-hsi-2026",
+  "read_back_at_utc": "2026-09-23T20:51:41Z",
+  "submission": {
+    "ref": 56503530,
+    "file_name": "phase2_pca_local_texture_2026-09-24.zip",
+    "submitted_at_utc": "2026-09-23T20:48:30.123Z",
+    "description": "Phase2 Stage2-only spatial-4fold GO OA=.22941 AA=.22941 PCA24+local-texture LGBM seed=20260909",
+    "status": "COMPLETE",
+    "public_score": 0.06404,
+    "private_score": null
+  },
+  "offline_evidence": {
+    "reference_oa": 0.17058823529411765,
+    "reference_aa": 0.17058823529411768,
+    "candidate_oa": 0.22941176470588234,
+    "candidate_aa": 0.22941176470588237,
+    "oa_delta": 0.05882352941176469,
+    "aa_delta": 0.05882352941176469,
+    "all_frozen_checks_passed": true,
+    "gate_report": "phase2_first_experiment_2026-09-24.json",
+    "gate_report_sha256": "28a6997fc9d5e5eac3992f95e7a4f15a1b58adf38251caab77eaa7a729c481f5"
+  },
+  "artifacts": {
+    "model_sha256": "6f0f4cfade6bc17aeaf705d6935b2fe0069bc6262caabaac327be100e3457c95",
+    "transform_sha256": "ed46b00cc522e205f97243d88e0db84356845e9e5049f8b3546cc968dbfa2f36",
+    "prediction_report_sha256": "ddf351b48d063b93978363c704bcb7362957328ffca69aca16ab58fff9161283",
+    "submission_csv_sha256": "bf38812b1537dcc17de2dbd9c3b1fb6ec275b36e719e0edbfc2b5065766c7c23",
+    "uploaded_zip_sha256": "c4882e49e778182a43b5adff4ce9e39f22e2494d16954d9dd5dffd142a55ee88"
+  },
+  "post_score_gate": {
+    "rule": "public score below 0.15 seals the line",
+    "triggered": true,
+    "decision": "SEALED_NO_FOLLOWUP_SUBMISSION",
+    "reason": "The 0.06404 public score is far below the preregistered 0.15 floor, showing that the 170-point spatial CV did not estimate cross-scene generalization."
+  }
+}

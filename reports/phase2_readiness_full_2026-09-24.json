@@ -1,0 +1,387 @@
+{
+  "competition": "tree-species-hsi-2026",
+  "purpose": "Phase 2 data-contract readiness only; no training, inference, or submission",
+  "baseline_manifest": "official/file_manifest.csv",
+  "current_manifest": "official/file_manifest_latest.csv",
+  "baseline_manifest_signature": "7d209482f0811b5480027c01f03d9a3f50436697d83b9555ebb5245ad016e4af",
+  "current_manifest_signature": "102dfc454ca113c8918c3b14870300e1dc515bb38b7d497bb74ebc8948f31f28",
+  "manifest_delta": {
+    "added": [
+      "Stage2/Stage2/data.mat",
+      "Stage2/Stage2/train_label.mat"
+    ],
+    "removed": [],
+    "changed": [
+      "data_hsi.mat",
+      "sample_submission.csv",
+      "scene_info.csv",
+      "test_scene1.mat",
+      "test_scene2.mat",
+      "train_label.mat",
+      "val_label.mat"
+    ]
+  },
+  "full_local_hashes_required_for_ready": true,
+  "full_local_hashes_requested": true,
+  "legal_data_boundary": {
+    "allowed": [
+      "organizer-provided competition files",
+      "public pretrained resources only after license and disclosure audit"
+    ],
+    "forbidden": [
+      "test labels or inferred manual labels",
+      "private or undeclared external datasets",
+      "using leaderboard feedback to select validation thresholds"
+    ]
+  },
+  "local_payload": [
+    {
+      "name": "Stage2/Stage2/data.mat",
+      "expected_size": 3757069343,
+      "exists": true,
+      "size": 3757069343,
+      "size_matches": true,
+      "sha256": "b8365c067b643be8586740e9abc25fbb2453e7511f7322994ebfee4cf8053881"
+    },
+    {
+      "name": "Stage2/Stage2/train_label.mat",
+      "expected_size": 25651,
+      "exists": true,
+      "size": 25651,
+      "size_matches": true,
+      "sha256": "6da4f07736039e4b1603defdb034fd48aace83dabc651552c5ff38c2c227d758"
+    },
+    {
+      "name": "data_hsi.mat",
+      "expected_size": 1497412123,
+      "exists": true,
+      "size": 1497412123,
+      "size_matches": true,
+      "sha256": "abcffb2f89d5ea79fcd39faa296e2def4300a44f7c4e6170705c0c736e7ccfc5"
+    },
+    {
+      "name": "sample_submission.csv",
+      "expected_size": 407070393,
+      "exists": true,
+      "size": 407070393,
+      "size_matches": true,
+      "sha256": "1d9fb26d2e1e7e30b8bf7836edfbd5dc85b229222dca9a30470b48a6065ce167"
+    },
+    {
+      "name": "scene_info.csv",
+      "expected_size": 123,
+      "exists": true,
+      "size": 123,
+      "size_matches": true,
+      "sha256": "1030c930e4458043b7e100680ed881c7d7eeabe6a70f35076a4a07a8c7b2680d"
+    },
+    {
+      "name": "test_scene1.mat",
+      "expected_size": 1637435207,
+      "exists": true,
+      "size": 1637435207,
+      "size_matches": true,
+      "sha256": "33dd79ad73762cda5aa17ffe7dc0766927487eaf52c1a8e776559ec3fc8772c4"
+    },
+    {
+      "name": "test_scene2.mat",
+      "expected_size": 879370957,
+      "exists": true,
+      "size": 879370957,
+      "size_matches": true,
+      "sha256": "22c3e77838b204af2eb24089b12b24ddf69f18e1ef5128d3027f0478ae5918f9"
+    },
+    {
+      "name": "train_label.mat",
+      "expected_size": 10484,
+      "exists": true,
+      "size": 10484,
+      "size_matches": true,
+      "sha256": "64f15d2e5437e020a98fc47295e9de4c61c915fd75f35b7bb18df0de092fbcd1"
+    },
+    {
+      "name": "val_label.mat",
+      "expected_size": 95708,
+      "exists": true,
+      "size": 95708,
+      "size_matches": true,
+      "sha256": "cde05db8525630ad6e46e52e177fbd0aef3e74b2f1558d2205c26e59607eefe6"
+    }
+  ],
+  "contract": {
+    "mat_inventory": [
+      {
+        "file": "Stage2/Stage2/data.mat",
+        "datasets": [
+          {
+            "dataset": "data",
+            "shape": [
+              4205,
+              6048,
+              98
+            ],
+            "dtype": "uint16"
+          }
+        ]
+      },
+      {
+        "file": "Stage2/Stage2/train_label.mat",
+        "datasets": [
+          {
+            "dataset": "ndvi_label",
+            "shape": [
+              4205,
+              6048
+            ],
+            "dtype": "uint8"
+          }
+        ]
+      },
+      {
+        "file": "data_hsi.mat",
+        "datasets": [
+          {
+            "dataset": "data",
+            "shape": [
+              98,
+              4040,
+              2444
+            ],
+            "dtype": "uint16"
+          }
+        ]
+      },
+      {
+        "file": "test_scene1.mat",
+        "datasets": [
+          {
+            "dataset": "image",
+            "shape": [
+              98,
+              4507,
+              3104
+            ],
+            "dtype": "uint16"
+          }
+        ]
+      },
+      {
+        "file": "test_scene2.mat",
+        "datasets": [
+          {
+            "dataset": "image",
+            "shape": [
+              98,
+              2181,
+              3409
+            ],
+            "dtype": "uint16"
+          }
+        ]
+      },
+      {
+        "file": "train_label.mat",
+        "datasets": [
+          {
+            "dataset": "train_label",
+            "shape": [
+              4040,
+              2444
+            ],
+            "dtype": "uint8"
+          }
+        ]
+      },
+      {
+        "file": "val_label.mat",
+        "datasets": [
+          {
+            "dataset": "val_label",
+            "shape": [
+              4040,
+              2444
+            ],
+            "dtype": "uint8"
+          }
+        ]
+      }
+    ],
+    "labels": [
+      {
+        "file": "Stage2/Stage2/train_label.mat",
+        "dataset": "ndvi_label",
+        "shape": [
+          4205,
+          6048
+        ],
+        "class_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "labeled_pixels": 170,
+        "sha256": "6da4f07736039e4b1603defdb034fd48aace83dabc651552c5ff38c2c227d758"
+      },
+      {
+        "file": "train_label.mat",
+        "dataset": "train_label",
+        "shape": [
+          4040,
+          2444
+        ],
+        "class_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "labeled_pixels": 170,
+        "sha256": "64f15d2e5437e020a98fc47295e9de4c61c915fd75f35b7bb18df0de092fbcd1"
+      },
+      {
+        "file": "val_label.mat",
+        "dataset": "val_label",
+        "shape": [
+          4040,
+          2444
+        ],
+        "class_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "labeled_pixels": 690829,
+        "sha256": "cde05db8525630ad6e46e52e177fbd0aef3e74b2f1558d2205c26e59607eefe6"
+      }
+    ],
+    "class_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "n_classes": 17,
+    "n_bands": 98,
+    "cubes": [
+      {
+        "file": "Stage2/Stage2/data.mat",
+        "dataset": "data",
+        "shape": [
+          4205,
+          6048,
+          98
+        ],
+        "dtype": "uint16"
+      },
+      {
+        "file": "data_hsi.mat",
+        "dataset": "data",
+        "shape": [
+          98,
+          4040,
+          2444
+        ],
+        "dtype": "uint16"
+      },
+      {
+        "file": "test_scene1.mat",
+        "dataset": "image",
+        "shape": [
+          98,
+          4507,
+          3104
+        ],
+        "dtype": "uint16"
+      },
+      {
+        "file": "test_scene2.mat",
+        "dataset": "image",
+        "shape": [
+          98,
+          2181,
+          3409
+        ],
+        "dtype": "uint16"
+      }
+    ],
+    "submission": {
+      "file": "sample_submission.csv",
+      "header": [
+        "id",
+        "label"
+      ],
+      "rows": 21424757,
+      "scene_order": [
+        "scene1",
+        "scene2"
+      ],
+      "scene_counts": {
+        "scene1": 13989728,
+        "scene2": 7435029
+      },
+      "placeholder_labels": [
+        1
+      ],
+      "id_contract": "contiguous scene blocks; zero-based integer suffix",
+      "sha256": "1d9fb26d2e1e7e30b8bf7836edfbd5dc85b229222dca9a30470b48a6065ce167"
+    }
+  },
+  "contract_signature": "48c5699ebcffb08f220c0b0d5f8634d3bb3eb8df2a52ccedbbbf8085eddd0709",
+  "old_artifact_reuse": "BLOCKED_PHASE2_MANIFEST_CHANGED_AND_NO_SEMANTIC_CLASS_MAPPING_PROVIDED",
+  "status": "READY_FOR_PHASE2_VALIDATION",
+  "decision": "MAY_BUILD_PHASE2_FOLDS_AND_RETRAIN_FROM_SCRATCH; NO_SUBMISSION_YET"
+}

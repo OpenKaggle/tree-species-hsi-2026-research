@@ -1,0 +1,50 @@
+{
+  "competition": "tree-species-hsi-2026",
+  "queried_at_utc": "2026-09-09T11:07:47Z",
+  "official_leaderboard_snapshot": "tree-species-hsi-2026-publicleaderboard-2026-09-09T11:07:02.csv",
+  "team": {
+    "id": 16856844,
+    "name": "Jiayi Du",
+    "member_usernames": ["jahyee"],
+    "official_rank": 31,
+    "submission_count": 3
+  },
+  "submissions": [
+    {
+      "ref": 56108130,
+      "file_name": "sam_v1.csv",
+      "submitted_at_utc": "2026-09-08T22:36:44.777Z",
+      "description": "sam_v1 raw_l2 centroid; region-OOF OA=.36169 AA=.37566; seed=20260909; code=d95b8e3",
+      "status": "COMPLETE",
+      "public_score": 0.06571,
+      "private_score": null,
+      "code_revision": "d95b8e3905ddfef8a653dc01e4290ab4389add6c",
+      "submission_sha256": "6d4385be35d38f97c3cd8f0adc79f11b5cf4b53bb7d6ca659d5a85454bbbf363"
+    },
+    {
+      "ref": 56108653,
+      "file_name": "lightgbm_v1.csv",
+      "submitted_at_utc": "2026-09-08T23:25:44.213Z",
+      "description": "lightgbm_v1 152 spectral features; region-OOF OA=.62085 AA=.57243; seed=20260909; code=e64c6f4",
+      "status": "COMPLETE",
+      "public_score": 0.09307,
+      "private_score": null,
+      "code_revision": "e64c6f4",
+      "model_sha256": "d6540b24115d8c800df0eeedfb11b2c57bd0776109bc106bd3cd944b3a7c1f4a",
+      "submission_sha256": "90dd37d7359f8bfb5f0f9a91bfcb979bf52b3dcae4395999f4e06cd80b257ab4"
+    },
+    {
+      "ref": 56120914,
+      "file_name": "lightgbm_spatial_r1_v3.zip",
+      "submitted_at_utc": "2026-09-09T11:04:27.807Z",
+      "description": "lightgbm_spatial_r1_v3 3x3 mean; region-OOF OA=.68814 AA=.62649; seed=20260909; code=6c84550",
+      "status": "COMPLETE",
+      "public_score": 0.10387,
+      "private_score": null,
+      "code_revision": "6c84550",
+      "model_sha256": "adcaea3ff353e0dfa163204a6a806bf4c1ada25a09381e0b41f1e99a81679058",
+      "submission_csv_sha256": "6c14f7eefb48e7ec117e2dbe5fd3205242828f8a5eac33dc1fb7e1fd8f0f48c6",
+      "uploaded_zip_sha256": "c99417a976a6c5ff50c3a4497b21b8fc43ebc49ed8de5ce972d040a477a4f3d3"
+    }
+  ]
+}

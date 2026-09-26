@@ -1,0 +1,104 @@
+{
+  "competition": "tree-species-hsi-2026",
+  "purpose": "Phase 2 data-contract readiness only; no training, inference, or submission",
+  "baseline_manifest": "official/file_manifest.csv",
+  "current_manifest": "official/file_manifest_latest.csv",
+  "baseline_manifest_signature": "7d209482f0811b5480027c01f03d9a3f50436697d83b9555ebb5245ad016e4af",
+  "current_manifest_signature": "102dfc454ca113c8918c3b14870300e1dc515bb38b7d497bb74ebc8948f31f28",
+  "manifest_delta": {
+    "added": [
+      "Stage2/Stage2/data.mat",
+      "Stage2/Stage2/train_label.mat"
+    ],
+    "removed": [],
+    "changed": [
+      "data_hsi.mat",
+      "sample_submission.csv",
+      "scene_info.csv",
+      "test_scene1.mat",
+      "test_scene2.mat",
+      "train_label.mat",
+      "val_label.mat"
+    ]
+  },
+  "full_local_hashes_required_for_ready": true,
+  "full_local_hashes_requested": false,
+  "legal_data_boundary": {
+    "allowed": [
+      "organizer-provided competition files",
+      "public pretrained resources only after license and disclosure audit"
+    ],
+    "forbidden": [
+      "test labels or inferred manual labels",
+      "private or undeclared external datasets",
+      "using leaderboard feedback to select validation thresholds"
+    ]
+  },
+  "local_payload": [
+    {
+      "name": "Stage2/Stage2/data.mat",
+      "expected_size": 3757069343,
+      "exists": false
+    },
+    {
+      "name": "Stage2/Stage2/train_label.mat",
+      "expected_size": 25651,
+      "exists": false
+    },
+    {
+      "name": "data_hsi.mat",
+      "expected_size": 1497412123,
+      "exists": true,
+      "size": 1497412123,
+      "size_matches": true
+    },
+    {
+      "name": "sample_submission.csv",
+      "expected_size": 407070393,
+      "exists": false
+    },
+    {
+      "name": "scene_info.csv",
+      "expected_size": 123,
+      "exists": true,
+      "size": 123,
+      "size_matches": true
+    },
+    {
+      "name": "test_scene1.mat",
+      "expected_size": 1637435207,
+      "exists": true,
+      "size": 1637435207,
+      "size_matches": true
+    },
+    {
+      "name": "test_scene2.mat",
+      "expected_size": 879370957,
+      "exists": true,
+      "size": 879370957,
+      "size_matches": true
+    },
+    {
+      "name": "train_label.mat",
+      "expected_size": 10484,
+      "exists": true,
+      "size": 10484,
+      "size_matches": true
+    },
+    {
+      "name": "val_label.mat",
+      "expected_size": 95708,
+      "exists": true,
+      "size": 95708,
+      "size_matches": true
+    }
+  ],
+  "status": "BLOCKED_PHASE2_PAYLOAD_INCOMPLETE",
+  "decision": "NO_TRAIN_NO_INFERENCE_NO_SUBMISSION",
+  "errors": [
+    "missing: Stage2/Stage2/data.mat",
+    "missing: Stage2/Stage2/train_label.mat",
+    "missing: sample_submission.csv"
+  ],
+  "old_artifact_reuse": "BLOCKED_MANIFEST_CHANGED"
+}

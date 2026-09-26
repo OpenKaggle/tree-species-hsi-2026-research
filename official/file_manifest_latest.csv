@@ -1,0 +1,11 @@
+Warning: Looks like you're using an outdated `kaggle` version (installed: 2.2.0), please consider upgrading to the latest version (2.2.2)
+name,size,creationDate
+Stage2/Stage2/data.mat,3757069343,2026-09-21 07:37:39.521000
+Stage2/Stage2/train_label.mat,25651,2026-09-21 07:36:26.385000
+data_hsi.mat,1497412123,2026-09-21 07:35:48.995000
+sample_submission.csv,407070393,2026-09-21 07:36:24.501000
+scene_info.csv,123,2026-09-21 07:36:19.811000
+test_scene1.mat,1637435207,2026-09-21 07:35:52.380000
+test_scene2.mat,879370957,2026-09-21 07:35:41.224000
+train_label.mat,10484,2026-09-21 07:35:25.189000
+val_label.mat,95708,2026-09-21 07:35:25.025000

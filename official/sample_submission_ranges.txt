@@ -1,0 +1,15 @@
+Official HTTP Range receipt for sample_submission.csv
+Captured: 2026-09-08 UTC / 2026-09-09 Asia/Shanghai
+Total bytes from Content-Range: 407070393
+
+HEAD (bytes 0-511), beginning:
+id,label
+scene1_00000000,1
+scene1_00000001,1
+scene1_00000002,1
+
+TAIL (bytes 407069881-407070392), ending:
+scene2_07435026,1
+scene2_07435027,1
+scene2_07435028,1
+

@@ -1,0 +1,14 @@
+{
+  "decision_source": "reports/phase2_first_experiment_2026-09-24.json",
+  "decision_source_sha256": "28a6997fc9d5e5eac3992f95e7a4f15a1b58adf38251caab77eaa7a729c481f5",
+  "model": "artifacts/phase2_pca_local_texture_lgbm.txt",
+  "model_sha256": "6f0f4cfade6bc17aeaf705d6935b2fe0069bc6262caabaac327be100e3457c95",
+  "transform": "artifacts/phase2_pca_transform.npz",
+  "transform_sha256": "ed46b00cc522e205f97243d88e0db84356845e9e5049f8b3546cc968dbfa2f36",
+  "samples": 170,
+  "features": 317,
+  "pca_components": 24,
+  "pca_explained_variance_ratio_sum": 0.9694404006004333,
+  "training_accuracy_diagnostic_only": 1.0,
+  "runtime_seconds": 23.80883002281189
+}

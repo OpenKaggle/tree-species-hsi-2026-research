@@ -1,0 +1,30 @@
+{
+  "competition": "tree-species-hsi-2026",
+  "purpose": "Phase 2 data-contract readiness only; no training, inference, or submission",
+  "baseline_manifest": "official/file_manifest.csv",
+  "current_manifest": "official/file_manifest_2026-09-17.csv",
+  "baseline_manifest_signature": "7d209482f0811b5480027c01f03d9a3f50436697d83b9555ebb5245ad016e4af",
+  "current_manifest_signature": "7d209482f0811b5480027c01f03d9a3f50436697d83b9555ebb5245ad016e4af",
+  "manifest_delta": {
+    "added": [],
+    "removed": [],
+    "changed": []
+  },
+  "full_local_hashes_required_for_ready": true,
+  "full_local_hashes_requested": false,
+  "legal_data_boundary": {
+    "allowed": [
+      "organizer-provided competition files",
+      "public pretrained resources only after license and disclosure audit"
+    ],
+    "forbidden": [
+      "test labels or inferred manual labels",
+      "private or undeclared external datasets",
+      "using leaderboard feedback to select validation thresholds"
+    ]
+  },
+  "status": "WAIT_PHASE2_NOT_RELEASED",
+  "decision": "NO_TRAIN_NO_INFERENCE_NO_SUBMISSION",
+  "reason": "Official inventory is byte/date-identical to the frozen Phase 1 manifest.",
+  "old_artifact_reuse": "BLOCKED_UNTIL_PHASE2_CONTRACT_EXISTS"
+}

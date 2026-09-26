@@ -1,0 +1,77 @@
+{
+  "protocol_version": 1,
+  "frozen_on": "2026-09-17",
+  "trigger": "Run only after the official Kaggle file inventory changes on or after 2026-09-21.",
+  "legal_data_boundary": {
+    "trainable": [
+      "organizer-provided labeled Phase 2 pixels",
+      "organizer-provided unlabeled Phase 2 pixels for aggregate drift diagnostics only"
+    ],
+    "requires_separate_license_and_disclosure_audit": [
+      "public pretrained weights",
+      "public external datasets"
+    ],
+    "forbidden": [
+      "test labels",
+      "manual or fabricated test labels",
+      "private or undeclared external data",
+      "leaderboard-selected thresholds or class mappings"
+    ]
+  },
+  "contract_gate": {
+    "required_status": "READY_FOR_PHASE2_VALIDATION",
+    "requirements": [
+      "official manifest delta exists",
+      "every local official file matches its declared size and has a SHA-256 receipt",
+      "band count is uniquely inferred",
+      "the union of training class IDs is contiguous and every per-file class subset is recorded",
+      "sample submission ID blocks are contiguous, zero based, and fully hashed",
+      "old Phase 1 encoder and head remain blocked unless the organizer supplies an explicit semantic class mapping"
+    ]
+  },
+  "validation": {
+    "unit": "spatial block, never random pixel",
+    "folds": 4,
+    "block_construction": "deterministic rectangular scene tiles; keep each tile wholly inside one fold; balance labeled class mass greedily",
+    "fit_scope": "all preprocessing, PCA, feature scaling, and class balancing are fit inside each training fold",
+    "reports": [
+      "OOF overall accuracy",
+      "OOF average per-class accuracy",
+      "per-class accuracy",
+      "per-fold OA and AA",
+      "worst-block OA and AA",
+      "prediction coverage and class collapse checks"
+    ],
+    "phase1_scores_are_not_comparable": true
+  },
+  "reference": {
+    "name": "phase2_retrained_spatial_mean_lightgbm",
+    "definition": "Retrain the frozen 3x3 spatial-mean LightGBM recipe from scratch on Phase 2 labels and the same Phase 2 folds.",
+    "purpose": "Same-data reference only; do not reuse Phase 1 weights or old 0.68814 OOF as a threshold."
+  },
+  "first_candidate": {
+    "name": "pca_local_texture_lightgbm",
+    "single_scientific_change": "replace raw 98-band tree input with fold-fit spectral PCA plus local spatial mean, local spatial standard deviation, and first spectral differences",
+    "pca_components": 24,
+    "spatial_radius": 1,
+    "classifier": "class-balanced LightGBM with the reference tree budget and fixed seed",
+    "reason": "Tests spectral compression and local texture jointly while keeping the classifier, folds, budget, and label policy fixed."
+  },
+  "go_no_go": {
+    "offline_go": [
+      "candidate OA improves by at least 0.03 over the Phase 2 retrained reference",
+      "candidate AA improves by at least 0.03 over the Phase 2 retrained reference",
+      "worst spatial block OA and AA each decline by no more than 0.02",
+      "schema, hash, coverage, leakage, runtime, and class-collapse gates pass"
+    ],
+    "offline_stop": "If any offline GO condition fails, do not run full test inference and do not submit.",
+    "public_stop": "First legal Phase 2 public score below 0.15 seals the line.",
+    "public_followup": "A score at or above 0.20 permits exactly one independent spectral-spatial follow-up; 0.15 to 0.20 keeps the baseline but permits no expansion."
+  },
+  "submission_budget": {
+    "before_phase2_release": 0,
+    "after_release_without_offline_go": 0,
+    "after_offline_go": 1,
+    "maximum_followups": 1
+  }
+}
