@@ -6,8 +6,8 @@ title: Hyperspectral Tree Species Identification Challenge 2026 research
 type: software
 authors:
   - name: OpenKaggle contributors
-repository-code: https://github.com/openkaggle/tree-species-hsi-research
-url: https://github.com/openkaggle/tree-species-hsi-research
+repository-code: https://github.com/OpenKaggle/tree-species-hsi-2026-research
+url: https://github.com/OpenKaggle/tree-species-hsi-2026-research
 license: MIT
 version: 2026.09.27
-date-released: 2026-09-27
+date-released: 2026-09-28

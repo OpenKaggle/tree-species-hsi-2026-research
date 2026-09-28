@@ -91,3 +91,17 @@ Official facts and acceptance receipts are recorded in
 
 See [`PUBLIC_ARCHIVE.md`](PUBLIC_ARCHIVE.md), [`PROVENANCE.yml`](PROVENANCE.yml),
 and [`REPRODUCIBILITY.md`](REPRODUCIBILITY.md) for the public-release boundary.
+
+## Cite this repository
+
+Please cite the repository snapshot and the immutable commit or tag you used.
+
+```bibtex
+@software{openkaggle_tree_species_hsi_2026,
+  author = {OpenKaggle contributors},
+  title = {Hyperspectral Tree Species Identification Challenge 2026 research},
+  year = {2026},
+  url = {https://github.com/OpenKaggle/tree-species-hsi-2026-research},
+  version = {snapshot-2026-09}
+}
+```
