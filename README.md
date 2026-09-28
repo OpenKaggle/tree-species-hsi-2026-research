@@ -98,7 +98,7 @@ Please cite the repository snapshot and the immutable commit or tag you used.
 
 ```bibtex
 @software{openkaggle_tree_species_hsi_2026,
-  author = {OpenKaggle contributors},
+  author = {Jah-yee},
   title = {Hyperspectral Tree Species Identification Challenge 2026 research},
   year = {2026},
   url = {https://github.com/OpenKaggle/tree-species-hsi-2026-research},
