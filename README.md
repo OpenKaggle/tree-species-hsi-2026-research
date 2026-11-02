@@ -6,6 +6,8 @@
 > competition data, data-derived model payloads, generated submissions,
 > virtual environments, caches, and absolute-path symlinks are not published.
 
+**Publication gate: 2026-09-25T23:59Z** (= tree-species-hsi-2026 submission end; already elapsed — repo is public-eligible; visibility decision is separate)
+
 Low-cost, reproducible pipeline for the Kaggle competition
 [`tree-species-hsi-2026`](https://www.kaggle.com/competitions/tree-species-hsi-2026).
 
